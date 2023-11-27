@@ -1,3 +1,4 @@
+import { MainLayout } from '@/layouts/main';
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
 import { useRouter } from 'next/dist/client/router';
 import * as React from 'react';
@@ -25,7 +26,7 @@ export default function PostDetailPage({ post }: PostPageProps) {
     </div>
   );
 }
-
+PostDetailPage.Layout = MainLayout;
 export const getStaticPaths: GetStaticPaths = async () => {
   console.log('\nGET STATIC PATHS');
   const response = await fetch('https://js-post-api.herokuapp.com/api/posts?_page=1');
