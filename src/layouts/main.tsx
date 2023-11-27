@@ -4,8 +4,6 @@ import { LayoutProps } from '../models/index';
 import Link from 'next/link';
 import * as React from 'react';
 
-export interface IAppProps {}
-
 export function MainLayout({ children }: LayoutProps) {
   return (
     <div className='font-sans bg-gray-100'>

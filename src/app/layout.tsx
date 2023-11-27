@@ -1,6 +1,7 @@
 import '@/styles/global.css';
 
 import type { Metadata } from 'next';
+import { MainLayout } from '../layouts';
 
 export const metadata: Metadata = {
   icons: [
@@ -36,9 +37,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body>
-        <MainLayout>{children}</MainLayout>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
